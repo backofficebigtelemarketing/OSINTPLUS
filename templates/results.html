@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Risultati</title><link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"></head>
+<body class="bg-gray-900 text-white p-6">
+  <h2 class="text-2xl font-bold mb-4">🔍 Risultati per: {{ query }}</h2>
+  <ul class="space-y-2">
+    {% for link in results %}
+      <li class="bg-gray-800 p-3 rounded"><a href="{{ link }}" target="_blank" class="text-blue-400 hover:underline">{{ link }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="/dashboard" class="text-yellow-400 hover:underline mt-4 block">⬅️ Torna alla Dashboard</a>
+</body>
+</html>
