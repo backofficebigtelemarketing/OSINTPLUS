@@ -9,7 +9,7 @@ def generate_links(query):
     query = query.strip().replace(" ", "+")
     return {
         "Google": f"https://www.google.com/search?q={query}",
-        "Epieos": f"https://epieos.com/?q={query}",
+        "Epieos": f"https://www.instagram.com/?q={query}",
         "Namechk": f"https://namechk.com/{query}",
         "Hunter.io": f"https://hunter.io/search/{query}",
         "IntelX": f"https://intelx.io/?s={query}",
