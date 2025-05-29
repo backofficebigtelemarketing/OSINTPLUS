@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="it">
+<head><meta charset="UTF-8"><title>Risultati OSINT</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"></head>
+<body class="bg-gray-950 text-white p-6">
+<h1 class="text-3xl font-bold text-yellow-400 mb-6">🔍 Risultati OSINT per "{{ query }}"</h1>
+{% if results %}
+<ul class="space-y-3">{% for source, link in results %}
+<li class="bg-gray-800 p-4 rounded hover:bg-gray-700 transition">
+<strong class="text-yellow-300">{{ source }}</strong>: <a href="{{ link }}" target="_blank" class="text-blue-400 hover:underline">{{ link }}</a>
+</li>{% endfor %}</ul>
+{% else %}<p class="text-red-400">Nessun risultato trovato.</p>{% endif %}
+<a href="/" class="mt-6 inline-block text-yellow-300 hover:underline">🔙 Torna alla ricerca</a></body></html>
