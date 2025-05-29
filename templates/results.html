@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Risultati OSINT</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-950 text-white p-8">
+  <h1 class="text-3xl text-yellow-400 font-bold mb-6">🔎 Risultati per: "{{ query }}"</h1>
+  <ul class="space-y-4">
+    {% for name, url in links.items() %}
+    <li class="bg-gray-800 p-4 rounded hover:bg-gray-700">
+      <strong class="text-yellow-300">{{ name }}</strong>: 
+      <a href="{{ url }}" target="_blank" class="text-blue-400 hover:underline">{{ url }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <a href="/" class="inline-block mt-8 text-yellow-300 hover:underline">🔙 Nuova Ricerca</a>
+</body>
+</html>
