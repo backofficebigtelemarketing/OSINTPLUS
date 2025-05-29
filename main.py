@@ -16,6 +16,7 @@ def generate_links(query):
         "SocialSearcher": f"https://www.social-searcher.com/search-users/?q={query}",
         "Whois": f"https://who.is/whois/{query}",
         "Shodan": f"https://www.shodan.io/search?query={query}"
+        "facebook": f"https://www.facebook.com/search?query={query}"
     }
 
 @app.get("/", response_class=HTMLResponse)
